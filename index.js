@@ -83,6 +83,11 @@ app.get("/barcodes/:filename", (req, res) => {
 });
 
 
+app.get("/", (req, res)=>{
+  res.send("Hello world");
+})
+
+
 // create database connection mongoose
 mongoose.connect(process.env.MONGO_URI).then(() => {
   console.log("[*] Database run")
